@@ -58,7 +58,7 @@
 		"enabled": true,
 		"purgeOnly": false,
 		"purgeInterval": "10m",
-		"listen": "0.0.0.0:8081",
+		"listen": "0.0.0.0:8080",
 		"statsCollectInterval": "5s",
 		"hashrateWindow": "30m",
 		"hashrateLargeWindow": "3h",
@@ -70,28 +70,28 @@
 	"upstreamCheckInterval": "5s",
 	"upstream": [
 		{
-			"name": "mumbai",
-			"url": "http://10.4.1.10:8000",
+			"name": "main",
+			"url": "http://0.0.0.0:8545",
 			"timeout": "10s"
 		},
 		{
 			"name": "backup",
-			"url": "http://10.4.1.11:8545",
+			"url": "http://0.0.0.0:8545",
 			"timeout": "10s"
 		}
 	],
 
 	"redis": {
-		"endpoint": "10.4.10.100:6379",
+		"endpoint": "0.0.0.0:6379",
 		"poolSize": 500,
-		"database": 8,
-		"password": "9B3D8aD6705d246C82dBaA0DC10D2C7Ce47115Af"
+		"database": 0,
+		"password": ""
 	},
 
 	"unlocker": {
 		"enabled": false,
 		"poolFee": 0.9,
-		"poolFeeAddress": "0x9dbe1caae874baae91022d170fba246100c73286",
+		"poolFeeAddress": "0x000F990627B17ED7D93597A355af8E4fCC3b9519",
 		"donate": false,
 		"depth": 120,
 		"immatureDepth": 20,
@@ -107,7 +107,7 @@
 		"interval": "120m",
 		"daemon": "http://127.0.0.1:8545",
 		"timeout": "10s",
-		"address": "0xff2a46e45df2b49f388f523b43153c38079237d9",
+		"address": "0x000F990627B17ED7D93597A355af8E4fCC3b9519",
 		"gas": "21000",
 		"gasPrice": "20000000000",
 		"autoGas": true,
@@ -119,7 +119,7 @@
 	},
 
 	"exchange": {
-		"enabled": true,
+		"enabled": false,
 		"url": "https://api.coinmarketcap.com/v1/ticker/ethereum/?convert=INR",
 		"timeout": "50s",
 		"refreshInterval": "1800s"
